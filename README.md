@@ -82,6 +82,9 @@ python french_video_card_precise.py
 
 # Scrape Memory
 python french_memory_precise.py
+
+# Scrape from PCPartPicker (comprehensive)
+python pcpartpicker_scraper.py
 ```
 
 ## 🔧 Command Line Options
@@ -125,14 +128,34 @@ Each analyzed product includes comprehensive data:
 pc-component-mixer-ai/
 ├── pc_component_mixer_ai.py      # Main AI-enhanced mixer
 ├── pc_component_mixer.py         # Original mixer (no AI)
+├── pcpartpicker_scraper.py       # Comprehensive PCPartPicker scraper
 ├── french_*_precise.py           # Individual component scrapers
 ├── leboncoin_scraper.py          # LeBonCoin marketplace scraper
-├── pcpartpicker_scraper.py       # PCPartPicker scraper
 ├── vinted_scraper.py             # Vinted marketplace scraper
 ├── requirements_ai.txt           # AI dependencies
 ├── requirements.txt              # Basic dependencies
 └── *.csv, *.json                 # Scraped data files
 ```
+
+## 🔧 Scrapers Overview
+
+### PCPartPicker Scraper (`pcpartpicker_scraper.py`)
+- **Comprehensive**: Scrapes all major component categories
+- **Stealth Mode**: Uses undetected Chrome to avoid detection
+- **Data Export**: Saves to both CSV and JSON formats
+- **Categories**: CPU, Motherboard, Memory, Storage, Video Card, Case, PSU, Coolers, etc.
+- **Features**: Price tracking, vendor information, availability status
+
+### French Component Scrapers (`french_*_precise.py`)
+- **Targeted**: Specific scrapers for each component type
+- **Cloudflare Bypass**: Uses SeleniumBase UC mode
+- **Precise Targeting**: Extracts exact product data from tables
+- **Localized**: French PC Part Picker with Euro pricing
+
+### Marketplace Scrapers
+- **LeBonCoin**: French marketplace for used components
+- **Vinted**: Additional marketplace integration
+- **Real-time**: Latest listings with timestamps
 
 ## 💡 AI Features Explained
 
